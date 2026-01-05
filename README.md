@@ -21,11 +21,10 @@ Etapas principais (machine_learning.ipynb)
 - Tratamento: arredondamento de valores numericos e preenchimento de ausencias com zero ou False.
 - Selecionadas features numericas: `qtde_proposta`, `qtde_contato`, `media_tempo_proposta`, `media_valor_proposta`.
 - Split train/test (80/20) e treinamento de `LogisticRegression` com `random_state=16`.
-- Predicao de probabilidades e avaliacao via matriz de confusao com limiar customizado de 0.38 para classificar comprado vs. nao comprado.
+- Predicao de probabilidades e avaliacao via matriz de confusao com limiar customizado para classificar comprado vs. nao comprado.
 
 Regra de negocio adotada
-------------------------
-- Priorizar clientes com probabilidade prevista de compra igual ou maior que 40%.
+------------------------.
 - Ordenar pela coluna `%_comprar` (probabilidade em %) e, em seguida, pelo maior `media_valor_proposta` para focar em tickets mais altos.
 - Selecionar o top 10 clientes resultantes para ação comercial imediata.
 
